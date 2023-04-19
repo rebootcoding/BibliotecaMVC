@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Libro>
+
+@*<p>
+	@Html.ActionLink("Aggiungi Nuovo Libro", "AddBook")
+</p>*@
+
+<table class="table">
+	<tr>
+		<th>
+			@Html.DisplayNameFor(item => item.Id)
+		</th>
+		<th>
+			@Html.DisplayNameFor(item => item.Titolo)
+		</th>
+		<th>
+			@Html.DisplayNameFor(item => item.Autore)
+		</th>
+		<th>
+			@Html.DisplayNameFor(item => item.Disponibilità)
+		</th>
+		<th></th>
+		<th></th>
+	</tr>
+
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td>
+				@Html.DisplayFor(modelItem => item.Id)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Titolo)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Autore)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Disponibilità)
+			</td>
+			<td>
+				<input type="submit" value="Prendi in Prestito" />
+			</td>
+			<td>
+				<input type="submit" value="Restituisci" />
+			</td>
+			@*<td>
+		@Html.ActionLink("Edit", "Edit", new {id = item.StaffId})
+		</td>
+		<td>
+		@Html.ActionLink("Delete", "Delete", new {id = item.StaffId})
+		</td>*@
+		</tr>
+	}
+</table>
+

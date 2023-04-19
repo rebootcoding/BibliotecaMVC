@@ -1,0 +1,33 @@
+﻿@model Libro
+
+@using (Html.BeginForm())
+{
+	<h2>Aggiungi libro a catalogo</h2>
+
+	<div>
+		@Html.LabelFor(model=>model.Id)
+		<div>
+			@Html.EditorFor(model => model.Id)
+		</div>
+	</div>
+
+	<div>
+		@Html.LabelFor(model=>model.Titolo)
+		<div>
+			@Html.EditorFor(model => model.Titolo)
+		</div>
+	</div>
+	<div>
+		@Html.LabelFor(model=>model.Autore)
+		<div>
+			@Html.EditorFor(model => model.Autore)
+		</div>
+	</div>
+	<div>
+		@Html.LabelFor(model=>model.Disponibilità)
+		<div>
+			@Html.EditorFor(model => model.Disponibilità)
+		</div>
+	</div>
+	<input type="submit" value="Aggiungi Libro" />
+}

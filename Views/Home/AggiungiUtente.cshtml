@@ -1,0 +1,38 @@
+﻿@model Utente
+
+@using (Html.BeginForm())
+{
+	<h2>Aggiungi nuovo utente</h2>
+	<div>
+		@Html.LabelFor(model=>model.Id)
+		<div>
+			@Html.EditorFor(model => model.Id)
+		</div>
+	</div>
+
+	<div>
+		@Html.LabelFor(model=>model.Nome)
+		<div>
+			@Html.EditorFor(model => model.Nome)
+		</div>
+	</div>
+	<div>
+		@Html.LabelFor(model=>model.Cognome)
+		<div>
+			@Html.EditorFor(model => model.Cognome)
+		</div>
+	</div>
+	<div>
+		@Html.LabelFor(model=>model.Password)
+		<div>
+			@Html.EditorFor(model => model.Password)
+		</div>
+	</div>
+	<div>
+		@Html.LabelFor(model=>model.Logged)
+		<div>
+			@Html.EditorFor(model => model.Logged)
+		</div>
+	</div>
+	<input type="submit" value="Aggiungi Nuovo Utente" />
+}
